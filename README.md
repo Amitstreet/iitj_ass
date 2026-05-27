@@ -38,6 +38,18 @@ The datasets are automatically downloaded from public Goodreads review archives.
 
 Each genre contains thousands of reviews used for training and evaluation.
 
+
+# Links
+
+| Resource | Link |
+|---|---|
+| Hugging Face Model | https://huggingface.co/Ami12cbdfhdxf/distilbert-goodreads-genres |
+| Weights & Biases Dashboard | https://wandb.ai/amitsinghyyj-iit-/mlops-assignment2 |
+| Kaggle Notebook | https://www.kaggle.com/code/amitsinghxfxc/iit-as |
+| GitHub Repository |https://github.com/Amitstreet/iitj_ass |
+
+---
+
 ✨ Features
 
 ✅ Goodreads review genre classification
