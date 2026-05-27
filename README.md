@@ -1,85 +1,97 @@
- Goodreads Genre Classification using DistilBERT
+# Goodreads Genre Classification using DistilBERT
 
 A Natural Language Processing (NLP) project that fine-tunes a DistilBERT model to classify Goodreads book reviews into different literary genres using the Hugging Face Transformers library.
 
- Project Overview
+---
 
-This project performs multi-class text classification on Goodreads reviews.
+# 📖 Project Overview
+
+This project performs **multi-class text classification** on Goodreads reviews.
 
 Given a review, the model predicts its corresponding genre from the following categories:
 
-Poetry
-Children
-Comics & Graphic Novels
-Fantasy & Paranormal
-History & Biography
-Mystery / Thriller / Crime
-Romance
-Young Adult
+- Poetry
+- Children
+- Comics & Graphic Novels
+- Fantasy & Paranormal
+- History & Biography
+- Mystery / Thriller / Crime
+- Romance
+- Young Adult
 
 The project also compares a traditional Machine Learning baseline with a Transformer-based deep learning model.
 
-🧠 Model Architecture
+---
+
+# 🧠 Model Architecture
 
 This project uses:
 
-DistilBERT (distilbert-base-cased)
-PyTorch
-Hugging Face Transformers
+- DistilBERT (`distilbert-base-cased`)
+- PyTorch
+- Hugging Face Transformers
 
 DistilBERT is a lightweight and faster version of BERT that retains most of BERT’s language understanding capabilities while reducing computation cost.
 
-📂 Dataset
+---
 
-Dataset Source:
-Goodreads Review Datasets from the UCSD McAuley Lab.
+# 📂 Dataset
+
+**Dataset Source:** Goodreads Review Datasets from the UCSD McAuley Lab.
 
 The datasets are automatically downloaded from public Goodreads review archives.
 
 Each genre contains thousands of reviews used for training and evaluation.
 
+---
 
-# Links
+# 🔗 Links
 
 | Resource | Link |
 |---|---|
 | Hugging Face Model | https://huggingface.co/Ami12cbdfhdxf/distilbert-goodreads-genres |
 | Weights & Biases Dashboard | https://wandb.ai/amitsinghyyj-iit-/mlops-assignment2 |
 | Kaggle Notebook | https://www.kaggle.com/code/amitsinghxfxc/iit-as |
-| GitHub Repository |https://github.com/Amitstreet/iitj_ass |
+| GitHub Repository | https://github.com/Amitstreet/iitj_ass |
 
 ---
 
-✨ Features
+# ✨ Features
 
-✅ Goodreads review genre classification
-✅ TF-IDF + Logistic Regression baseline
-✅ DistilBERT fine-tuning
-✅ Accuracy and F1-score evaluation
-✅ Confusion matrix visualization
-✅ Weights & Biases experiment tracking
-✅ Hugging Face Hub integration
-✅ Automated dataset downloading
-✅ Classification reports generation
+- ✅ Goodreads review genre classification
+- ✅ TF-IDF + Logistic Regression baseline
+- ✅ DistilBERT fine-tuning
+- ✅ Accuracy and F1-score evaluation
+- ✅ Confusion matrix visualization
+- ✅ Weights & Biases experiment tracking
+- ✅ Hugging Face Hub integration
+- ✅ Automated dataset downloading
+- ✅ Classification reports generation
 
-🛠️ Tech Stack
-Category	Tools / Libraries
-Language	Python
-Deep Learning	PyTorch
-Transformers	Hugging Face Transformers
-ML Baseline	Scikit-learn
-Visualization	Matplotlib, Seaborn
-Experiment Tracking	Weights & Biases
-Model Hosting	Hugging Face Hub
-📦 Installation
+---
 
-Clone the repository:
+# 🛠️ Tech Stack
 
+| Category | Tools / Libraries |
+|---|---|
+| Language | Python |
+| Deep Learning | PyTorch |
+| Transformers | Hugging Face Transformers |
+| ML Baseline | Scikit-learn |
+| Visualization | Matplotlib, Seaborn |
+| Experiment Tracking | Weights & Biases |
+| Model Hosting | Hugging Face Hub |
+
+---
+
+# 📦 Installation
+
+## Clone the repository
+
+```bash
 git clone https://github.com/Amitstreet/iitj_ass
-cd goodreads-genre-classifier
-
-Install dependencies:
-
+cd iitj_ass
+Install dependencies
 pip install -r requirements.txt
 📋 Required Libraries
 transformers
@@ -145,6 +157,8 @@ Evaluation Artifacts
 
 Example initialization:
 
+import wandb
+
 wandb.init(
     project="mlops-assignment2",
     name="distilbert-run-1"
@@ -184,11 +198,4 @@ Amit Singh
 
 📜 License
 
-This project is intended for educational and research purposes.
-
-⭐ Acknowledgements
-Goodreads Dataset
-UCSD McAuley Lab
-Hugging Face
-PyTorch
-Weights & Biases
+This project is intended for educational a
