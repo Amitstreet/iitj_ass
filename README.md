@@ -51,6 +51,7 @@ Each genre contains thousands of reviews used for training and evaluation.
 |---|---|
 | Hugging Face Model | https://huggingface.co/Ami12cbdfhdxf/distilbert-goodreads-genres |
 | Weights & Biases Dashboard | https://wandb.ai/amitsinghyyj-iit-/mlops-assignment2 |
+| report link:https://api.wandb.ai/links/amitsinghyyj-iit-/plmo1b7t
 | Kaggle Notebook | https://www.kaggle.com/code/amitsinghxfxc/iit-as |
 | GitHub Repository | https://github.com/Amitstreet/iitj_ass |
 
