@@ -1,53 +1,65 @@
-Goodreads Genre Classification using DistilBERT
+ Goodreads Genre Classification using DistilBERT
 
-A machine learning and NLP project that fine-tunes a DistilBERT model to classify Goodreads book reviews into multiple genres using the Hugging Face Transformers library.
+A Natural Language Processing (NLP) project that fine-tunes a DistilBERT model to classify Goodreads book reviews into different literary genres using the Hugging Face Transformers library.
 
-Project Overview
+ Project Overview
 
 This project performs multi-class text classification on Goodreads reviews.
-The model predicts the genre of a book review from the following categories:
+
+Given a review, the model predicts its corresponding genre from the following categories:
 
 Poetry
 Children
-Comics & Graphic
+Comics & Graphic Novels
 Fantasy & Paranormal
 History & Biography
 Mystery / Thriller / Crime
 Romance
 Young Adult
 
-The project also includes:
+The project also compares a traditional Machine Learning baseline with a Transformer-based deep learning model.
 
-TF-IDF + Logistic Regression baseline
-DistilBERT fine-tuning
-Evaluation metrics (Accuracy + F1 Score)
-Confusion matrix visualizations
-Weights & Biases experiment tracking
-Hugging Face Hub integration
-Model Used
-distilbert-base-cased
+🧠 Model Architecture
 
-Using:
+This project uses:
 
+DistilBERT (distilbert-base-cased)
 PyTorch
 Hugging Face Transformers
-Scikit-learn
-Dataset
 
-Dataset source: Goodreads Reviews Dataset by UCSD McAuley Lab
+DistilBERT is a lightweight and faster version of BERT that retains most of BERT’s language understanding capabilities while reducing computation cost.
 
-Each genre dataset is downloaded automatically from public URLs.
+📂 Dataset
 
-Features
-Automatic dataset downloading
-Random sampling and preprocessing
-Baseline ML model comparison
-Transformer fine-tuning
-Evaluation and classification reports
-Confusion matrix heatmaps
-Hugging Face model upload support
-W&B experiment logging
-Installation
+Dataset Source:
+Goodreads Review Datasets from the UCSD McAuley Lab.
+
+The datasets are automatically downloaded from public Goodreads review archives.
+
+Each genre contains thousands of reviews used for training and evaluation.
+
+✨ Features
+
+✅ Goodreads review genre classification
+✅ TF-IDF + Logistic Regression baseline
+✅ DistilBERT fine-tuning
+✅ Accuracy and F1-score evaluation
+✅ Confusion matrix visualization
+✅ Weights & Biases experiment tracking
+✅ Hugging Face Hub integration
+✅ Automated dataset downloading
+✅ Classification reports generation
+
+🛠️ Tech Stack
+Category	Tools / Libraries
+Language	Python
+Deep Learning	PyTorch
+Transformers	Hugging Face Transformers
+ML Baseline	Scikit-learn
+Visualization	Matplotlib, Seaborn
+Experiment Tracking	Weights & Biases
+Model Hosting	Hugging Face Hub
+📦 Installation
 
 Clone the repository:
 
@@ -57,7 +69,7 @@ cd goodreads-genre-classifier
 Install dependencies:
 
 pip install -r requirements.txt
-Required Libraries
+📋 Required Libraries
 transformers
 torch
 scikit-learn
@@ -68,75 +80,103 @@ seaborn
 wandb
 huggingface_hub
 requests
-Running the Project
+▶️ Running the Project
 
 Run the training script:
 
 python train_bert_genre_classifier.py
-Training Pipeline
+🔄 Project Workflow
 
-The script performs the following steps:
+The script performs the following pipeline:
 
-Load Goodreads review datasets
-Create train/test split
-Train TF-IDF baseline model
-Tokenize text using DistilBERT tokenizer
-Fine-tune DistilBERT
-Evaluate model performance
-Generate classification report
-Plot confusion matrices
-Save trained model
+1. Dataset Downloading
+Downloads Goodreads review datasets
+Caches reviews locally
+2. Data Preprocessing
+Random review sampling
+Train-test splitting
+Label encoding
+3. Baseline Model
+TF-IDF Vectorization
+Logistic Regression Classification
+4. Transformer Fine-Tuning
+Tokenization using DistilBERT tokenizer
+Fine-tuning DistilBERT on Goodreads reviews
+5. Evaluation
+Accuracy Score
+Weighted F1 Score
+Classification Report
+6. Visualization
+Confusion Matrix Heatmaps
+Misclassification Analysis
+7. Model Deployment
+Save trained model locally
 Push model to Hugging Face Hub
-Example Results
+📊 Example Results
 Metric	Score
 Accuracy	0.605
 Weighted F1 Score	0.606
-Hugging Face Integration
 
-Login using your HF token:
+These results were achieved using DistilBERT fine-tuning on Goodreads review data.
 
-from huggingface_hub import login
+📈 Weights & Biases Integration
 
-login(token="YOUR_HF_TOKEN")
+This project uses Weights & Biases (W&B) for experiment tracking.
 
-Push model:
+Tracked metrics include:
 
-model.push_to_hub("your-username/distilbert-goodreads-genres")
-tokenizer.push_to_hub("your-username/distilbert-goodreads-genres")
-Weights & Biases Tracking
-
-The project logs:
-
-Training loss
-Evaluation loss
+Training Loss
+Validation Loss
 Accuracy
 F1 Score
-Artifacts
+Evaluation Artifacts
 
-Initialize W&B:
+Example initialization:
 
 wandb.init(
     project="mlops-assignment2",
     name="distilbert-run-1"
 )
-Output Files
+🤗 Hugging Face Hub Integration
 
-Generated during training:
+Login using your Hugging Face token:
+
+from huggingface_hub import login
+
+login(token="YOUR_HF_TOKEN")
+
+Push model and tokenizer:
+
+model.push_to_hub("your-username/distilbert-goodreads-genres")
+tokenizer.push_to_hub("your-username/distilbert-goodreads-genres")
+📁 Generated Outputs
+
+The project generates:
 
 eval_report.json
 Confusion matrix heatmaps
-Saved DistilBERT model
-W&B logs
-Future Improvements
+Fine-tuned DistilBERT model
+W&B experiment logs
+Classification reports
+📌 Future Improvements
 Hyperparameter tuning
-Larger training dataset
-More transformer architectures
+Larger training datasets
+Additional transformer architectures
 Better class balancing
-Deployment with FastAPI or Streamlit
-Author
+FastAPI deployment
+Streamlit web app
+Docker support
+👨‍💻 Author
 
 Amit Singh
 
-License
+📜 License
 
-This project is for educational and research purposes.
+This project is intended for educational and research purposes.
+
+⭐ Acknowledgements
+Goodreads Dataset
+UCSD McAuley Lab
+Hugging Face
+PyTorch
+Weights & Biases
