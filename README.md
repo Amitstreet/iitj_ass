@@ -75,7 +75,7 @@ Model Hosting	Hugging Face Hub
 
 Clone the repository:
 
-git clone https://github.com/your-username/goodreads-genre-classifier.git
+git clone https://github.com/Amitstreet/iitj_ass
 cd goodreads-genre-classifier
 
 Install dependencies:
